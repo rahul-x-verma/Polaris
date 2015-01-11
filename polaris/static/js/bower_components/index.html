@@ -1,0 +1,17 @@
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script  type="text/javascript" src="typeahead.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$('.typeahead').typeahead({
+  minLength: 3,
+    highlight: true,
+    },
+    {
+      name: 'my-dataset',
+        source: ['Mercedes', 'Audi']
+        });
+</script>
+<input type="text" class="typeahead tt-query" autocomplete="off"
+spellcheck="false">
+

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Polaris - Directions for Bear Transit</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="static/css/stylish-portfolio.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/static/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <h1>Welcome to Polaris</h1>
+            <h3>Directions for Bear Transit and the Night Safety Shuttle</h3>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <form role="form" action='/results' method='POST'>
+                <div class="form-group">
+                <label for="sel1" style="color: white">Select Starting Point:</label>
+                <select name="Start" class="form-control" id="sel1" style="width: 400px; margin: 0 auto">
+                    <option>Moffit Library</option>
+                    <option>College Avenue @ Haste Street</option>
+                    <option>Foothill Student Housing: Hearst Avenue Side</option>
+                    <option>Unit 2: College Avenue @ Haste Street</option>
+                    <option>Evans Hall: Hearst Mining Circle Side</option>
+                    <option>Downtown Berkeley BART Station: Shattuck Avenue @ Addison Street</option>
+                    <option>Dwight Way @ Fulton Street</option>
+                    <option>Unit 3: Channing Way @ Telegraph Avenue</option>
+                    <option>International House: Piedmont Avenue @ Bancroft Way</option>
+                    <option>Gayley @ Stadium Rimway</option>
+                    <option>Oxford Street @ University Avenue</option>
+                    <option>Hearst Memorial Gym: Bancroft Way @ Bowditch Street</option>
+                    <option>ASUC: Bancroft Way @ Telegraph Avenue</option>
+                    <option>Piedmont Avenue @ Channing Way</option>
+                    <option>Ellsworth Structure, Channing Way Side</option>
+                    <option>Life Science Addition, West Circle Side</option>
+                    <option>Shattuck Avenue @ Allston Way</option>
+                    <option>Lawrence Hall of Science</option>
+                    <option>Bancroft Way @ Kittredge Street</option>
+                    <option>Sproul Hall: Bancroft Way @ Barrow Lane</option>
+                    <option>Strawberry Canyon Recreational Area</option>
+                    <option>Warring Street @ Piedmont Crescent</option>
+                    <option>Kroeber Hall: Bancroft Way @ College Avenue</option>
+                    <option>Tolman Hall: Hearst Avenue @ Arch Street</option>
+                    <option>West Circle: University Drive Side</option>
+                    <option>Haas School of Business, Piedmont Avenue Side</option>
+                    <option>Shattuck Avenue @ Kittredge Street</option>
+                    <option>Space Sciences Lab/MSRI</option>
+                    <option>Highland Place @ Ridge Road</option>
+                    <option>Manville Hall: Shattuck Avenue @ Channing Avenue</option>
+                    <option>Bowles Hall: Gayley Road Side</option>
+                    <option>Banway Building: Bancroft Way @ Shattuck Avenue</option>
+                    <option>University Avenue @ Shattuck Avenue</option>
+                    <option>Unit 1: Channing Way @ College Avenue</option>
+                    <option>UC Botanical Garden</option>
+                    <option>Cory Hall: Hearst Avenue @ LeRoy Avenue</option>
+                    <option>Warring Street @ Bancroft Steps</option>
+                    <option>North Gate Hall: Hearst Avenue @ Euclid Avenue</option>
+                    <option>RSF: Bancroft Way @ Ellsworth Street</option>
+                    <option>Greek Theater: Gayley Road @ University Drive</option>
+                    <option>East Gate: Gayley Road @ University Drive</option>
+                    <option>Li Ka Shing Center: West Crescent Side</option>
+
+                </select>
+                <br>
+                <label for="sel2" style="color: white">Select Destination:</label>
+                <select name="Destination" class="form-control" id="sel1" style="width: 400px; margin: 0 auto">
+                    <option>Moffit Library</option>
+                    <option>College Avenue @ Haste Street</option>
+                    <option>Foothill Student Housing: Hearst Avenue Side</option>
+                    <option>Unit 2: College Avenue @ Haste Street</option>
+                    <option>Evans Hall: Hearst Mining Circle Side</option>
+                    <option>Downtown Berkeley BART Station: Shattuck Avenue @ Addison Street</option>
+                    <option>Dwight Way @ Fulton Street</option>
+                    <option>Unit 3: Channing Way @ Telegraph Avenue</option>
+                    <option>International House: Piedmont Avenue @ Bancroft Way</option>
+                    <option>Gayley @ Stadium Rimway</option>
+                    <option>Oxford Street @ University Avenue</option>
+                    <option>Hearst Memorial Gym: Bancroft Way @ Bowditch Street</option>
+                    <option>ASUC: Bancroft Way @ Telegraph Avenue</option>
+                    <option>Piedmont Avenue @ Channing Way</option>
+                    <option>Ellsworth Structure, Channing Way Side</option>
+                    <option>Life Science Addition, West Circle Side</option>
+                    <option>Shattuck Avenue @ Allston Way</option>
+                    <option>Lawrence Hall of Science</option>
+                    <option>Bancroft Way @ Kittredge Street</option>
+                    <option>Sproul Hall: Bancroft Way @ Barrow Lane</option>
+                    <option>Strawberry Canyon Recreational Area</option>
+                    <option>Warring Street @ Piedmont Crescent</option>
+                    <option>Kroeber Hall: Bancroft Way @ College Avenue</option>
+                    <option>Tolman Hall: Hearst Avenue @ Arch Street</option>
+                    <option>West Circle: University Drive Side</option>
+                    <option>Haas School of Business, Piedmont Avenue Side</option>
+                    <option>Shattuck Avenue @ Kittredge Street</option>
+                    <option>Space Sciences Lab/MSRI</option>
+                    <option>Highland Place @ Ridge Road</option>
+                    <option>Manville Hall: Shattuck Avenue @ Channing Avenue</option>
+                    <option>Bowles Hall: Gayley Road Side</option>
+                    <option>Banway Building: Bancroft Way @ Shattuck Avenue</option>
+                    <option>University Avenue @ Shattuck Avenue</option>
+                    <option>Unit 1: Channing Way @ College Avenue</option>
+                    <option>UC Botanical Garden</option>
+                    <option>Cory Hall: Hearst Avenue @ LeRoy Avenue</option>
+                    <option>Warring Street @ Bancroft Steps</option>
+                    <option>North Gate Hall: Hearst Avenue @ Euclid Avenue</option>
+                    <option>RSF: Bancroft Way @ Ellsworth Street</option>
+                    <option>Greek Theater: Gayley Road @ University Drive</option>
+                    <option>East Gate: Gayley Road @ University Drive</option>
+                    <option>Li Ka Shing Center: West Crescent Side</option>
+                </select>
+                <br>
+                <input type="submit" value="Get Directions">
+        </div>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Thank you for using Polaris!</h2>
+                    <p class="lead">Designed by Rahul Verma</a>.</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+  <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; Rahul Verma 2015</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="/static/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/bower_components/typeahead.js/dist/typeahead.bundle.min.js></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    </script>
+</body>
+
+</html>
