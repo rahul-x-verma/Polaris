@@ -1,13 +1,50 @@
+import sqlite3
 from polaris import polaris
 from flask import render_template, request
-from polaris.static.algorithm.main import find_directions 
-from polaris.static.algorithm.codenames import codenames
+from polaris.static.algorithm.main import find_directions, DB_PATH
+from polaris.static.algorithm.codenames import codenames, reverse_codenames
 from datetime import datetime
 
 @polaris.route('/')
 @polaris.route('/index')
 def index():
-    return render_template('index.html')
+    controller =  sqlite3.connect(DB_PATH)
+    now = datetime.now()
+    weekday = datetime.today().weekday()
+    hour = now.hour
+    minute = now.minute
+    time = hour * 60 + minute - 360
+
+    if time < 0:
+        time += 24 * 60
+        weekday -= 1
+    if weekday == 6:
+        weekday = "SUNDAY"
+    elif weekday == 5:
+        weekday = "SATURDAY"
+    else:
+        weekday = "WEEK"
+
+    possible_starts_tup = controller.execute("SELECT location FROM stops WHERE time \
+                                          > ? and time < ?+ \
+                                          45", (time, time)).fetchall()
+    
+    possible_ends_tup = controller.execute("SELECT location FROM stops WHERE time \
+                                          > ? and time < ?+ \
+                                          60", (time, time)).fetchall()
+    possible_starts, possible_ends = [], []
+
+    for start in possible_starts_tup:
+        possible_starts.append(reverse_codenames[start[0]])
+    for end in possible_ends_tup:
+        possible_ends.append(reverse_codenames[end[0]])
+
+
+    possible_starts = list(set(possible_starts))
+    possible_ends = list(set(possible_ends))
+
+    return render_template('index.html', starts=possible_starts,
+                            ends=possible_ends)
 
 @polaris.route('/results', methods=['POST', 'GET'])
 def results():

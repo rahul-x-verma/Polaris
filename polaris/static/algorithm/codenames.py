@@ -14,7 +14,7 @@ codenames = {"Downtown Berkeley BART Station: Shattuck Avenue @ Addison Street" 
  "Piedmont Avenue @ Channing Way": "PIEDCHA",
  "College Avenue @ Haste Street": "COLHA",
  "Kroeber Hall: Bancroft Way @ College Avenue": "KROEBER",
- "Hearst Memorial Gym: Bancroft Way @ Bowditch Street": "HMG",
+ "Hearst Memorial Gym: Bancroft Way @ Bowditch Street": "HEARST",
  "Sproul Hall: Bancroft Way @ Barrow Lane": "SPROUL",
  "RSF: Bancroft Way @ Ellsworth Street": "RSF",
  "Banway Building: Bancroft Way @ Shattuck Avenue": "BANWAY",
@@ -26,7 +26,7 @@ codenames = {"Downtown Berkeley BART Station: Shattuck Avenue @ Addison Street" 
  "Life Science Addition, West Circle Side": "LSA",
  "University Avenue @ Shattuck Avenue": "USHA",
  "Foothill Student Housing: Hearst Avenue Side": "FOOTHILL",
- "Highland Place @ Ridge Road": "RIDGE",
+ "Highland Place @ Ridge Road": "HIRIDGE",
  "East Gate: Gayley Road @ University Drive": "EAST",
  "Bowles Hall: Gayley Road Side": "BOWLES",
  "ASUC: Bancroft Way @ Telegraph Avenue": "ASUC",
@@ -41,6 +41,10 @@ codenames = {"Downtown Berkeley BART Station: Shattuck Avenue @ Addison Street" 
  "Warring Street @ Piedmont Crescent": "WAPIE",
  "Warring Street @ Bancroft Steps": "WABA",
  "Greek Theater: Gayley Road @ University Drive": "GREEK",
+ "Shattuck Avenue @ Bancroft Way": "BASHA",
+ "Clark Kerr Campus": "CKC",
+ "Warring Street @ Channing Way": "WACHA",
+ "West Crescent": "WC",
  }
 
 reverse_codenames = {}
