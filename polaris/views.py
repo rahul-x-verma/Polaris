@@ -50,8 +50,8 @@ def index():
 
 @polaris.route('/results', methods=['POST', 'GET'])
 def results():
-    if request.method == 'GET':
-        return index()
+#    if request.method == 'GET':
+#        return index()
     start = request.form.get('Start')
     dest = request.form.get('Destination')
     now = datetime.now()
