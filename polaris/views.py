@@ -43,8 +43,8 @@ def index():
     possible_starts = list(set(possible_starts))
     possible_ends = list(set(possible_ends))
 
-    if not possible_starts and possible_ends:
-        possible_starts, possible_ends = ["No lines currently in service."], ["No lines currently in service."] 
+#    if not possible_starts and possible_ends:
+#        possible_starts, possible_ends = ["No lines currently in service."], ["No lines currently in service."] 
     return render_template('index.html', starts=possible_starts,
                             ends=possible_ends)
 
