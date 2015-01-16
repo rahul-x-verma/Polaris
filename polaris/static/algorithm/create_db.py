@@ -126,7 +126,7 @@ def load_perimeter_line(controller):
             controller.execute(insert_string, (stop_count, 'KROEBER', i))
             stop_count += 1
         elif i % 30 == 21:
-            controller.execute(insert_string, (stop_count, 'HMG', i))
+            controller.execute(insert_string, (stop_count, 'HEARST', i))
             stop_count += 1
         elif i % 30 == 23:
             controller.execute(insert_string, (stop_count, 'SPROUL', i))
