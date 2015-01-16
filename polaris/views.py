@@ -26,12 +26,11 @@ def index():
         weekday = "WEEK"
 
     possible_starts_tup = controller.execute("SELECT location FROM stops WHERE time \
-                                          > ? and time < ?+ \
-                                          45", (time, time)).fetchall()
+                                          > ? and time < ?", (time, time + 45)).fetchall()
     
     possible_ends_tup = controller.execute("SELECT location FROM stops WHERE time \
-                                          > ? and time < ?+ \
-                                          60", (time, time)).fetchall()
+                                          > ? and time < ?",
+                                          (time, time+60)).fetchall()
     possible_starts, possible_ends = [], []
 
     for start in possible_starts_tup:
