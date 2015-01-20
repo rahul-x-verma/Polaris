@@ -6,4 +6,4 @@ This application aims to give Berkeley students a user friendly guide for unvers
 The heart of this application is a database containing information about each time a bus
 operated by Bear Transit or the Night Safety Shuttle stops somewhere. Finding a
 path between two points involves creating a graph data structure from this
-database and using Breadth-First Search. 
+database and using Breadth-First Search. The user interface is managed by Flask, with Twitter Bootstrap powering the front end.
