@@ -1,3 +1,6 @@
+"""
+A basic test to ensure the database was successfully populated.
+"""
 import sqlite3
 
 controller = sqlite3.connect('bus_data.db').cursor()

@@ -13,6 +13,8 @@ def index():
     weekday = datetime.today().weekday()
     hour = now.hour
     minute = now.minute
+
+    # Convert time into 6 AM-based format used by algorithm.
     time = hour * 60 + minute - 360
 
     if time < 0:
@@ -25,6 +27,7 @@ def index():
     else:
         weekday = "WEEK"
 
+    # Only display starting points currently in service.
     possible_starts_tup = controller.execute("SELECT location FROM stops WHERE time \
                                           > ? and time < ?", (time, time + 45)).fetchall()
     

@@ -1,3 +1,10 @@
+"""
+DICTIONARIES FOR CODENAME LOOKUP
+
+The algorithm and accompanying database use short codenames to refer to physical
+locations. The full name and description of physical locations will be shown on
+the user interface. 
+"""
 codenames = {"Downtown Berkeley BART Station: Shattuck Avenue @ Addison Street" : "BART",
  "Evans Hall: Hearst Mining Circle Side" : "EVANS",
  "Strawberry Canyon Recreational Area" : "SCRA",

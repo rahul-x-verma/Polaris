@@ -1,3 +1,6 @@
+"""
+A basic test of the BFS path finding algorithm.
+"""
 from polaris.static.algorithm.map import Map
 from polaris.static.algorithm.stop import Stop
 

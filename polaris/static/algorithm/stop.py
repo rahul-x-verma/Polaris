@@ -1,6 +1,6 @@
 class Stop():
     """
-    Represents a bus stopping.
+    Represents a bus stopping at a certain time and place.
     """
 
     def __init__(self, uid, location, time, line, days):

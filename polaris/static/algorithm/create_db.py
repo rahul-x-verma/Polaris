@@ -2,14 +2,14 @@
 SCRIPT TO GENERATE BUS INFORMATION DATABASE
 
 Database Plan: Maintain one table of each stop along with associated
-information. Note that the location is the proper name, not the coordinates, and
-that time is an integer that ranges from 0 when the first daytime bus arrives at
-a stop to the number of minutes until the last Night Safety Shuttle stop (this
-will represent a time during the next calendar day.)
+information. Note that the time field represents the number of minutes 
+after 6 AM the bus stops at a given point, so Night Safety Shuttle stops during
+the early hours of the day will be treated as belonging to the previous calendar
+day.
 """
 import sqlite3
 
-stop_count = 0
+stop_count = 0 # To serve as each stop's unique ID.
 
 def initialize_db():
     connection = sqlite3.connect('bus_data.db')
@@ -435,6 +435,10 @@ def load_northside_sunday(controller):
             stop_count += 1
 
 def load_southside(controller):
+    # Note for future expansion or updates: The method of loading stops into the
+    # database is much better as used in this function than in the other
+    # functions in this file.
+
     global stop_count
 
     locations = [('MOFFITM', 0), ('LSA', 1), ('WC', 2), ('BART', 5), 
