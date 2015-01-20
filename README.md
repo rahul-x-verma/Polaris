@@ -7,3 +7,5 @@ The heart of this application is a database containing information about each ti
 operated by Bear Transit or the Night Safety Shuttle stops somewhere. Finding a
 path between two points involves creating a graph data structure from this
 database and using Breadth-First Search. The user interface is managed by Flask, with Twitter Bootstrap powering the front end.
+
+This application has been deployed on Heroku and can be found at https://berkeley-polaris.herokuapp.com/
